@@ -16,6 +16,9 @@ BIBER_FLAGS=
 
 mkdir = @mkdir -p $(@D)
 
+show: thesis.pdf
+	open $<
+
 thesis.pdf: $(SRCS)
 	$(mkdir)
 	pdflatex $(LATEX_FLAGS) thesis
